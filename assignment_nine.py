@@ -1,8 +1,17 @@
+# Minwoo Rhee
+# 2018 11 30
+# assignment_nine
+# card game compare, 5 rounds, 2 players
 
 import deck
 
 
 def deal_cards(deck1):
+    """
+    make lists for each players, draws five cards for each and append cards to the list
+    :param deck1: deck to draw card from
+    :return: cards drawn for player 1, cards drawn for player 2
+    """
 
     player1_cards = []
     player2_cards = []
@@ -15,6 +24,12 @@ def deal_cards(deck1):
 
 
 def compare_cards(card1, card2):
+    """
+    compare two cards to determine who wins
+    :param card1: player 1 card
+    :param card2: player 2 card
+    :return: if player 1 wins, "Player One". if player 2 wins, "Player Two"
+    """
 
     if card1.compared_to(card2) == card1:
         return "Player One"
@@ -23,6 +38,10 @@ def compare_cards(card1, card2):
 
 
 def main():
+    """
+    draw cards, compare them and determine which player wins by comparing score variables
+    :return: None
+    """
 
     deck1 = deck.Deck()
 
